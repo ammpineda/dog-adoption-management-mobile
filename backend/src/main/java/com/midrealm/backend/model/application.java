@@ -1,7 +1,8 @@
-package main.java.com.midrealm.backend.model;
+package com.midrealm.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -35,7 +36,7 @@ public class application {
 
     public application(long id, String referenceCode, String status, String feedback, LocalDateTime submittedAt,
             LocalDateTime reviewedAt, LocalDateTime resultsAt, LocalDateTime modifiedAt, adopter applicant,
-            main.java.com.midrealm.backend.model.dog dog) {
+            com.midrealm.backend.model.dog dog) {
         this.id = id;
         this.referenceCode = referenceCode;
         this.status = status;

@@ -1,4 +1,4 @@
-package com.midrealm.DogAdoptionApp;
+package com.midrealm.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

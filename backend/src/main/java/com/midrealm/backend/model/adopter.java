@@ -1,6 +1,8 @@
-package main.java.com.midrealm.backend.model;
+package com.midrealm.backend.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 

@@ -1,4 +1,4 @@
-package main.java.com.midrealm.backend.model;
+package com.midrealm.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -39,7 +39,7 @@ public class dog {
     public dog(long id, String name, String displayImagePath, String breed, Date birthDate, String age, String gender,
             String color, String weight, String adoptionStatus, String description, String vaccinationRecord,
             LocalDateTime registeredAt, LocalDateTime modifiedAt,
-            main.java.com.midrealm.backend.model.application application) {
+            com.midrealm.backend.model.application application) {
         this.id = id;
         this.name = name;
         this.displayImagePath = displayImagePath;
