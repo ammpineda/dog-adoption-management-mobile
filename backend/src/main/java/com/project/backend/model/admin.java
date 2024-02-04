@@ -1,4 +1,4 @@
-package main.java.com.midrealm.backend.model;
+package com.project.backend.model;
 
 import javax.persistence.*;
 import java.util.Date;
