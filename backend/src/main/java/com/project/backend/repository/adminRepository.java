@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface adminRepository extends CrudRepository<admin, Integer> {
 
-    @Query("SELECT a FROM Admin a WHERE a.email = :email")
+    @Query("SELECT a FROM admin a WHERE a.email = :email")
     admin findAdminByEmail(@Param("email") String email);
 
-    @Query("SELECT a FROM Admin a WHERE a.password = :password")
+    @Query("SELECT a FROM admin a WHERE a.password = :password")
     admin findAdminByPassword(@Param("password") String pass);
 
     @Query("SELECT a FROM admin a WHERE a.email = :email AND a.password = :password")

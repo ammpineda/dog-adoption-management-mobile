@@ -50,8 +50,8 @@ public class adopterService {
         return adopterRepository.findByEmail(email);
     }
 
-    public List<adopter> findAdoptersByPhoneNumber(String phoneNumber) {
-        return adopterRepository.findByPhoneNumber(phoneNumber);
+    public List<adopter> findAdoptersByContactNumber(String contactNumber) {
+        return adopterRepository.findByContactNumber(contactNumber);
     }
 
 }

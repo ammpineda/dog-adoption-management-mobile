@@ -19,12 +19,10 @@ public interface adopterRepository extends CrudRepository<adopter, Integer> {
     @Query("SELECT a FROM adopter a WHERE CONCAT(a.email) LIKE %:email%")
     List<adopter> findByEmail(@Param("email")String email);
 
-    @Query("SELECT a FROM adopter a WHERE CONCAT(a.phoneNumber) LIKE %:phone%")
-    List<adopter> findByPhoneNumber(@Param("phone")String phoneNumber);
+    @Query("SELECT a FROM adopter a WHERE CONCAT(a.contactNumber) LIKE %:contact%")
+    List<adopter> findByContactNumber(@Param("contact")String contactNumber);
 
     @Query("SELECT a FROM adopter a WHERE a.email = :email")
     adopter findUserByEmail(@Param("email") String email);
 
-    @Query("SELECT a FROM adopter a WHERE a.password = :password")
-    adopter findUserByPassword(@Param("password") String pass);
 }
