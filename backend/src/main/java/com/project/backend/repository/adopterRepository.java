@@ -13,8 +13,6 @@ import java.util.Optional;
 
 @Repository
 public interface adopterRepository extends CrudRepository<adopter, Integer> {
-    @Query("SELECT a FROM adopter a WHERE CONCAT(a.firstName, ' ', a.lastName) LIKE %:name%")
-    List<adopter> findByName(@Param("name") String name);
 
     @Query("SELECT a FROM adopter a WHERE CONCAT(a.email) LIKE %:email%")
     List<adopter> findByEmail(@Param("email")String email);
@@ -24,5 +22,9 @@ public interface adopterRepository extends CrudRepository<adopter, Integer> {
 
     @Query("SELECT a FROM adopter a WHERE a.email = :email")
     adopter findUserByEmail(@Param("email") String email);
+
+    @Query(value = "SELECT MAX(id) FROM adopter", nativeQuery = true)
+    Integer findHighestId();
+
 
 }

@@ -5,6 +5,7 @@ import com.project.backend.repository.applicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -25,10 +26,13 @@ public class applicationService {
         return applicationRepository.findById((int) id);
     }
 
-    public void addApplication(application application) {
+    public application addApplication(application application) {
+        application.setStatus("Submitted");
+        String randomString = generateRandomString(6);
+        application.setReferenceCode(randomString);
         application.setSubmittedAt(LocalDateTime.now());
         application.setModifiedAt(LocalDateTime.now());
-        applicationRepository.save(application);
+        return applicationRepository.save(application);
     }
 
     public void updateApplication(application application) {
@@ -46,15 +50,23 @@ public class applicationService {
         return applicationRepository.findByReferenceCode(referenceCode);
     }
 
-    public List<application> findApplicationsByApplicantName(String applicantName) {
-        return applicationRepository.findByApplicantName(applicantName);
-    }
-
     public List<application> findApplicationsByDogName(String dogName) {
         return applicationRepository.findByDogName(dogName);
     }
 
     public List<application> findApplicationsByApplicantId(long id) {
         return applicationRepository.findByApplicantId(id);
+    }
+
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final SecureRandom RANDOM = new SecureRandom();
+
+    // Method to generate a random alphanumeric string of a specified length
+    private String generateRandomString(int length) {
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(CHARACTERS.charAt(RANDOM.nextInt(CHARACTERS.length())));
+        }
+        return sb.toString();
     }
 }

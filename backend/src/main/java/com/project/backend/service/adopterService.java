@@ -25,10 +25,10 @@ public class adopterService {
         return adopterRepository.findById((int) id);
     }
 
-    public void addAdopter(adopter adopter) {
+    public adopter addAdopter(adopter adopter) {
         adopter.setRegisteredAt(LocalDateTime.now());
         adopter.setUpdatedAt(LocalDateTime.now());
-        adopterRepository.save(adopter);
+        return adopterRepository.save(adopter);
     }
 
     public void updateAdopter(adopter adopter) {
@@ -42,10 +42,6 @@ public class adopterService {
 
     // Additional methods for searching
 
-    public List<adopter> findAdoptersByName(String name) {
-        return adopterRepository.findByName(name);
-    }
-
     public List<adopter> findAdoptersByEmail(String email) {
         return adopterRepository.findByEmail(email);
     }
@@ -53,5 +49,12 @@ public class adopterService {
     public List<adopter> findAdoptersByContactNumber(String contactNumber) {
         return adopterRepository.findByContactNumber(contactNumber);
     }
+
+    public Integer getHighestAdopterId() {
+        Integer highestId = adopterRepository.findHighestId();
+        return highestId != null ? highestId : 0;
+    }
+
+    
 
 }
