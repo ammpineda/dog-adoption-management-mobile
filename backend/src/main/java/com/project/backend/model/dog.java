@@ -19,7 +19,7 @@ import java.util.List;
 public class dog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String name;
     private String displayImagePath;
     private String breed;
@@ -41,7 +41,7 @@ public class dog {
 
     
 
-    public dog(long id, String name, String displayImagePath, String breed, Date birthDate, String gender,
+    public dog(int id, String name, String displayImagePath, String breed, Date birthDate, String gender,
             String color, String weight, String adoptionStatus, String description, String vaccinationRecord,
             LocalDateTime registeredAt, LocalDateTime modifiedAt, List<application> applications) {
         this.id = id;
@@ -67,13 +67,13 @@ public class dog {
 
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
 
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

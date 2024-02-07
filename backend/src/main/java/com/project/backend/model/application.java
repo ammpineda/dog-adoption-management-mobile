@@ -16,7 +16,7 @@ import java.util.Date;
 public class application {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String referenceCode;
     private String status;
     @Type(type="text")
@@ -35,7 +35,7 @@ public class application {
     private dog dog;
 
 
-    public application(long id, String referenceCode, String status, String feedback, LocalDateTime submittedAt,
+    public application(int id, String referenceCode, String status, String feedback, LocalDateTime submittedAt,
             LocalDateTime reviewedAt, LocalDateTime resultsAt, LocalDateTime modifiedAt, adopter applicant,
             com.project.backend.model.dog dog) {
         this.id = id;
@@ -55,12 +55,12 @@ public class application {
     }
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

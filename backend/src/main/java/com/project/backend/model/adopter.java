@@ -17,7 +17,7 @@ import java.util.List;
 public class adopter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
@@ -40,7 +40,7 @@ public class adopter {
     private List<application> applications;
 
 
-    public adopter(long id, String firstName, String lastName, String email, String contactNumber, String homeAddress,
+    public adopter(int id, String firstName, String lastName, String email, String contactNumber, String homeAddress,
             Date birthDate, String occupation, String housingType, String livingArrangement, String petExperience,
             String reasonsToAdopt, LocalDateTime registeredAt, LocalDateTime updatedAt,
             List<application> applications) {
@@ -66,12 +66,12 @@ public class adopter {
     }
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

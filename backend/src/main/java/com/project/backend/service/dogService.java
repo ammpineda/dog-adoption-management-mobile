@@ -24,10 +24,11 @@ public class dogService{
         return dogRepository.findById((int) id);
     }
 
-    public void addDog(dog dog) {
+    
+    public dog addDog(dog dog) {
         dog.setRegisteredAt(LocalDateTime.now());
         dog.setModifiedAt(LocalDateTime.now());
-        dogRepository.save(dog);
+        return dogRepository.save(dog);
     }
 
     public void updateDog(dog dog) {
