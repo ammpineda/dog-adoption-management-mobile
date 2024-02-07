@@ -16,7 +16,6 @@ import java.util.List;
 @Table(name="adopter")
 public class adopter {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String fullName;
     private String email;
