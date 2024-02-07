@@ -22,8 +22,8 @@ public class adminService {
         return adminRepository.findById(id);
     }
 
-    public void addAdmin(admin admin) {
-        adminRepository.save(admin);
+    public admin addAdmin(admin admin) {
+        return adminRepository.save(admin);
     }
 
     public void updateAdmin(admin admin) {
