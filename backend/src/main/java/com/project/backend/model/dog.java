@@ -7,7 +7,9 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -16,16 +18,16 @@ import java.util.List;
 @Table(name="dog")
 public class dog {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String displayImagePath;
     private String breed;
     private Date birthDate;
-    private String age; // in months
     private String gender;
     private String color;
     private String weight; // in kg
-    private String adoptionStatus; // default is "Available"
+    private String adoptionStatus = "Available"; // default is "Available"
     @Type(type="text")
     private String description;
     @Type(type="text")
@@ -39,7 +41,7 @@ public class dog {
 
     
 
-    public dog(long id, String name, String displayImagePath, String breed, Date birthDate, String age, String gender,
+    public dog(long id, String name, String displayImagePath, String breed, Date birthDate, String gender,
             String color, String weight, String adoptionStatus, String description, String vaccinationRecord,
             LocalDateTime registeredAt, LocalDateTime modifiedAt, List<application> applications) {
         this.id = id;
@@ -47,7 +49,6 @@ public class dog {
         this.displayImagePath = displayImagePath;
         this.breed = breed;
         this.birthDate = birthDate;
-        this.age = age;
         this.gender = gender;
         this.color = color;
         this.weight = weight;
@@ -123,19 +124,6 @@ public class dog {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
-
-
-
-    public String getAge() {
-        return age;
-    }
-
-
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
 
 
     public String getGender() {
@@ -244,6 +232,4 @@ public class dog {
         this.applications = applications;
     }
 
-    
-    
 }

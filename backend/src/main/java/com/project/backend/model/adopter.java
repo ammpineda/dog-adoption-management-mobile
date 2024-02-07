@@ -16,6 +16,7 @@ import java.util.List;
 @Table(name="adopter")
 public class adopter {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String firstName;
     private String lastName;

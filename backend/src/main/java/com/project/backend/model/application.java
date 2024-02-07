@@ -15,6 +15,7 @@ import java.util.Date;
 @Table(name="application")
 public class application {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String referenceCode;
     private String status;
