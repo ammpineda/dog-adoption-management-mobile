@@ -23,7 +23,7 @@ public class adopter {
     private String email;
     private String contactNumber;
     private String homeAddress;
-    private Date birthDate;
+    private String birthDate;
     private String occupation;
     private String housingType;
     @Type(type="text")
@@ -41,7 +41,7 @@ public class adopter {
 
 
     public adopter(int id, String firstName, String lastName, String email, String contactNumber, String homeAddress,
-            Date birthDate, String occupation, String housingType, String livingArrangement, String petExperience,
+            String birthDate, String occupation, String housingType, String livingArrangement, String petExperience,
             String reasonsToAdopt, LocalDateTime registeredAt, LocalDateTime updatedAt,
             List<application> applications) {
         this.id = id;
@@ -126,12 +126,12 @@ public class adopter {
     }
 
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 

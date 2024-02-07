@@ -23,7 +23,7 @@ public class dog {
     private String name;
     private String displayImagePath;
     private String breed;
-    private Date birthDate;
+    private String birthDate;
     private String gender;
     private String color;
     private String weight; // in kg
@@ -41,7 +41,7 @@ public class dog {
 
     
 
-    public dog(int id, String name, String displayImagePath, String breed, Date birthDate, String gender,
+    public dog(int id, String name, String displayImagePath, String breed, String birthDate, String gender,
             String color, String weight, String adoptionStatus, String description, String vaccinationRecord,
             LocalDateTime registeredAt, LocalDateTime modifiedAt, List<application> applications) {
         this.id = id;
@@ -115,13 +115,13 @@ public class dog {
 
 
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
 
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
