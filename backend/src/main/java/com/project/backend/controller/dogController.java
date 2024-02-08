@@ -11,6 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 
 @RestController
@@ -24,14 +28,19 @@ public class dogController{
         return dogService.addDog(dog);
     }
 
+    @PostMapping("update-dog")
+    public dog updateDog(@RequestBody dog dog) {
+        return dogService.updateDog(dog);
+    }
+
+    @DeleteMapping("delete-dog/{id}")
+    public void deleteDog(@PathVariable int id){
+        dogService.deleteDog(id);
+    }
+
     @GetMapping("all-dogs")
     public List<dog> getAllDogs() {
         return dogService.getAllDogs();
-    }
-
-    @GetMapping("dog/{id}")
-    public dog getDogById(@PathVariable long id) {
-        return dogService.getDogById(id).orElse(null);
     }
 
     @ExceptionHandler(Exception.class)

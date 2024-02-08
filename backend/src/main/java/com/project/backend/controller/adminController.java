@@ -2,10 +2,17 @@ package com.project.backend.controller;
 
 import com.project.backend.model.admin;
 import com.project.backend.service.adminService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class adminController{
@@ -16,13 +23,10 @@ public class adminController{
     public admin createAdmin(@RequestBody admin admin) {
         return adminService.addAdmin(admin);
     }
-
-    @RequestMapping(value="/login-admin", method= RequestMethod.POST)
-    public ResponseEntity<String> login(@RequestParam String email, @RequestParam String password) {
-        if (adminService.login(email, password)) {
-            return ResponseEntity.ok("Login successful");
-        } else {
-            return ResponseEntity.status(401).body("Invalid credentials");
-        }
+    
+    @RequestMapping(value="/get-admins", method=RequestMethod.GET)
+    public List<admin> getAllAdmins() {
+        return adminService.getAllAdmins();
     }
+    
 }

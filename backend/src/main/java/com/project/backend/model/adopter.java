@@ -24,7 +24,6 @@ public class adopter {
     private String birthDate;
     private String occupation;
     private String housingType;
-    private String livingArrangement;
     @Type(type = "text")
     private String reasonsToAdopt;
     private LocalDateTime registeredAt;
@@ -35,7 +34,7 @@ public class adopter {
     private List<application> applications;
 
     public adopter(int id, String fullName, String email, String contactNumber, String homeAddress, String birthDate,
-            String occupation, String housingType, String livingArrangement, String reasonsToAdopt,
+            String occupation, String housingType, String reasonsToAdopt,
             LocalDateTime registeredAt, LocalDateTime updatedAt, List<application> applications) {
         this.id = id;
         this.fullName = fullName;
@@ -45,7 +44,6 @@ public class adopter {
         this.birthDate = birthDate;
         this.occupation = occupation;
         this.housingType = housingType;
-        this.livingArrangement = livingArrangement;
         this.reasonsToAdopt = reasonsToAdopt;
         this.registeredAt = registeredAt;
         this.updatedAt = updatedAt;
@@ -117,14 +115,6 @@ public class adopter {
 
     public void setHousingType(String housingType) {
         this.housingType = housingType;
-    }
-
-    public String getLivingArrangement() {
-        return livingArrangement;
-    }
-
-    public void setLivingArrangement(String livingArrangement) {
-        this.livingArrangement = livingArrangement;
     }
 
     public String getReasonsToAdopt() {

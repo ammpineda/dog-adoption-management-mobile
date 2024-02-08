@@ -35,9 +35,9 @@ public class applicationService {
         return applicationRepository.save(application);
     }
 
-    public void updateApplication(application application) {
+    public application updateApplication(application application) {
         application.setModifiedAt(LocalDateTime.now());
-        applicationRepository.save(application);
+        return applicationRepository.save(application);
     }
 
     public void deleteApplication(long id) {

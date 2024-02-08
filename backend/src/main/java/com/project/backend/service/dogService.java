@@ -31,12 +31,12 @@ public class dogService{
         return dogRepository.save(dog);
     }
 
-    public void updateDog(dog dog) {
+    public dog updateDog(dog dog) {
         dog.setModifiedAt(LocalDateTime.now());
-        dogRepository.save(dog);
+        return dogRepository.save(dog);
     }
 
-    public void deleteDog(long id) {
+    public void deleteDog(int id) {
         dogRepository.deleteById((int) id);
     }
 
