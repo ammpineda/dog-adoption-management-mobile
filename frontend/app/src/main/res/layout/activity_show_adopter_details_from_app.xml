@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
+    tools:context=".ApplyAdoptionForm">
+
+    <EditText
+        android:id="@+id/adopter_birthday_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="280dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="128dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Birthday"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_job_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_housing_type_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="340dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_reasons_output_view"
+        android:layout_width="220dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="396dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="127dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="4dp"
+        android:fallbackLineSpacing="false"
+        android:fontFamily="@font/baloo_bhaina"
+        android:lineHeight="20sp"
+        android:text="Reasons for Adopt"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_housing_type_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Housing Type"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_housing_type_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_job_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="228dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_home_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="176dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Address"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_home_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Full Name"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_name_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Email"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_email_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Phone"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_phone_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="128dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/baloo_bhaina"
+        android:text="Occupation"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/adopter_job_output_view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_phone_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="120dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_email_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="64dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="none"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/adopter_name_output_view"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="351dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adopter_information_heading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

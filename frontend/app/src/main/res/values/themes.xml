@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BottomNavActivityPractice" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/shadeA</item>
+        <item name="colorPrimaryVariant">@color/shadeA</item>
+        <item name="colorOnPrimary">@color/shadeA</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/shadeA</item>
+        <item name="colorSecondaryVariant">@color/shadeA</item>
+        <item name="colorOnSecondary">@color/shadeA</item>
+
+        <item name="android:textColorPrimary">@color/shadeA</item>
+        <item name="colorPrimaryDark">@color/shadeA</item>
+
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+</resources>
