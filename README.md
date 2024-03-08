@@ -1,6 +1,6 @@
 # dog-adoption-management-mobile
 
-Completed as term-end project for the course IT193 Application Development 3, under the curriculum of BS Information Technology - Mapua University.
+Completed as term-end project for the course IT193 Application Development 3 (2Q SY 23-24), under the curriculum of BS Information Technology - Mapua University.
 
 <h1>Team:</h1>
 <ul>
